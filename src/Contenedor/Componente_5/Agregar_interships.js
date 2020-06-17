@@ -5,7 +5,6 @@ import { Menu, Dropdown, Button } from 'antd';
 import { Form, Input } from 'antd';
 const {  Content } = Layout;
 
-
 const menu = (
     <Menu>
         <Menu.Item>
@@ -28,7 +27,7 @@ const menu = (
 
 let intership =() =>{
     return (
-        <div>
+        <div >
 
             <h1>Agregar interships</h1>
             <br/>
@@ -98,7 +97,7 @@ let intership =() =>{
             <br/>
             <Button>Guardar</Button>
             <label>   </label>
-            <Button>Siguiente</Button>
+            <Button href="/Tipo">Siguiente</Button>
 
 
         </div>)

@@ -135,7 +135,7 @@ let tecnologias =()=>{
                 <Button>Agregar</Button>
             </div>
                 <br/>
-            <Button>Siguiente</Button>
+            <Button href="/Datos">Siguiente</Button>
 
         </div>
 

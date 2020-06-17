@@ -71,7 +71,7 @@ const tipoProyecto = () =>{
                     </Row>
         <br/>
                     <Row>
-                        <Col span={6} order={4}>   <Button>Siguiente</Button></Col>
+                        <Col span={6} order={4}>   <Button href="/Intel">Siguiente</Button></Col>
                         <Col span={6} order={3}></Col>
                         <Col span={6} order={2}></Col>
                         <Col span={6} order={1}></Col>

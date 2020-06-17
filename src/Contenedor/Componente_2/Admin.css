@@ -1,0 +1,13 @@
+.tabla tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #fff;
+}
+.tabla tr:nth-child(2) {
+    background-color: #eee;
+}
+.tabla tr {
+    background-color: #eee;
+}

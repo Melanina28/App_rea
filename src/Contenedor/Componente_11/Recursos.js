@@ -85,7 +85,7 @@ import TextArea from "antd/es/input/TextArea";
                  </Col>
                  <Col span={6}></Col>
              </Row>
-             <Button>Siguiente</Button>
+             <Button href="/Rec">Siguiente</Button>
             </div>
 
      )

@@ -134,7 +134,7 @@ let datosProyecto =()=>{
                 <Button>Agregar</Button>
             </div>
             <br/>
-            <Button>Siguiente</Button>
+            <Button href="/Comp">Siguiente</Button>
 
         </div>
 

@@ -111,7 +111,7 @@ let importar =() =>{
                         <br/>
                         <Button>Guardar</Button>
                         <label>   </label>
-                        <Button>Siguiente</Button>
+                        <Button href="/agregar">Siguiente</Button>
 
 
 </div>)

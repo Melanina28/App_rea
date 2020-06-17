@@ -107,7 +107,7 @@ let competencias = () =>{
                     </Col>
                     <Col span={6}></Col>
                 </Row>
-            <Button>Siguiente</Button>
+            <Button href="/Rec">Siguiente</Button>
             </div>
 
 
