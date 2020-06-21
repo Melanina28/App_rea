@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Route} from 'react-router-dom'
-import Administracion from "./Contenedor/Componente_2/Administracion";
+
 import Importar_intership from "./Contenedor/Componente_4/Importar_intership";
 import Agregar_interships from "./Contenedor/Componente_5/Agregar_interships";
 import Tipo_proyecto from './Contenedor/Componente_6/Tipo_proyecto';
@@ -14,7 +14,7 @@ class routes extends Component{
     render(){
         return(<di>
     <Route path={"/retos "} exact component={Retos}/>
-    <Route path={"/"}  component={Administracion} />
+
     <Route path={"/botones"} component={Botton}/>
     <Route path={"/importar"} component={Importar_intership} />
     <Route path={"/agregar"} component={Agregar_interships} />

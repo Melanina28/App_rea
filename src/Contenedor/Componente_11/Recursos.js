@@ -1,9 +1,12 @@
-import * as React from "react";
+import  React, {Component} from "react";
 import {Button, Col, Divider, Input, Row} from "antd";
 import TextArea from "antd/es/input/TextArea";
- let  recursos= () => {
+import  AppRec from './AppRec';
+ class  recursos extends Component{
+   render(){
      return (<div>
-             <h1>Recursos requeridos para el Proyecto Internship</h1>
+
+             <AppRec/>
                  <Row>
                      <Col span={6}></Col>
                      <Col span={6}>Nombre de reto:</Col>
@@ -89,7 +92,7 @@ import TextArea from "antd/es/input/TextArea";
             </div>
 
      )
-
+   }
 }
 
 export  default recursos;

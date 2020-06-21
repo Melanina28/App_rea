@@ -27,13 +27,11 @@ class administracion extends Component {
     render() {
         return (
             <div>
-                <Divider orientation="center" style={{color: '#333', fontWeight: 'normal'}}>
-                    <h1>Administración de Internships</h1>
-                </Divider>
+
                 <Row>
                     <Col span={8}></Col>
                     <Col span={8}></Col>
-                    <Col span={8}><Button type="button" href="/botones">Agregar proyecto </Button></Col>
+                    <Col span={8}></Col>
                 </Row>
 
                 <Row>

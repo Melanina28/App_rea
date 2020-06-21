@@ -1,108 +1,96 @@
-import * as React from "react";
-import { Layout } from 'antd';
-import { Row, Col } from 'antd';
-import { Menu, Dropdown, Button } from 'antd';
-import { Form, Input } from 'antd';
-const {  Content } = Layout;
+import  React, {Component} from "react";
+import './Agregar.css';
+import axios from "axios";
+import {
+    Input, Button, message, Form,Select, Row, Col
+} from 'antd';
+const { TextArea } = Input;
+class intership extends Component {
 
-const menu = (
-    <Menu>
-        <Menu.Item>
-            <a target="_blank" >
-                1st menu item
-            </a>
-        </Menu.Item>
-        <Menu.Item>
-            <a target="_blank" >
-                2nd menu item
-            </a>
-        </Menu.Item>
-        <Menu.Item>
-            <a target="_blank" >
-                3rd menu item
-            </a>
-        </Menu.Item>
-    </Menu>
-);
+    state = {
+        competence: [],
+        form: {
+            competence: '',
+            name: '',
+            objetivo:'',
+            problematica: '',
+        },
+    };
 
-let intership =() =>{
-    return (
-        <div >
-
-            <h1>Agregar interships</h1>
-            <br/>
-            <h3>Escribe el nombre y la descripción del Internship que deseas elaborar:</h3>
-            <br/>
-            <Row>
-                <Col span={6}></Col>
-                <Col span={6}>Nombre</Col>
-                <Col span={6}>
-                    <Input type="text" />
-                </Col>
-                <Col span={6}></Col>
-            </Row>
-            <br/>
-            <Row>
-                <Col span={6}></Col>
-                <Col span={6}>Objetivo intership</Col>
-                <Col span={6}>
-                    <Input type="text" />
-                </Col>
-                <Col span={6}></Col>
-            </Row>
-            <br/>
-            <Row>
-                <Col span={6}></Col>
-                <Col span={6}>Problematica a resolver</Col>
-                <Col span={6}><Input type="text" /></Col>
-                <Col span={6}></Col>
-            </Row>
-
-            <br/>
-            <Row>
-                <Col span={6}></Col>
-                <Col span={6}>Competencia general</Col>
-                <Col span={6}>
-                    <Dropdown overlay={menu} placement="bottomCenter">
-                        <Button>bottomCenter</Button>
-                    </Dropdown>
-                </Col>
-                <Col span={6}></Col>
-            </Row>
-
-            <h3>Selecciona la categoría de Internship que desarrollarás:</h3>
-            <Row>
-                <Col span={8}></Col>
-                <Col span={8}>
-                    <Dropdown overlay={menu} placement="bottomCenter">
-                        <Button>bottomCenter</Button>
-                    </Dropdown>
-                </Col>
-                <Col span={8}></Col>
-            </Row>
-            <Row>
-                <Col span={6}></Col>
-                <Col span={6}>
-                    <label>Recursos</label>
-                    <label> </label>
-                    <Input/>
-                </Col>
-                <Col span={6}>
-                    <label> Nombre recursos </label>
-                    <label> </label>
-                    <Input/>
-                </Col>
-                <Col span={6}></Col>
-            </Row>
-            <br/>
-            <Button>Guardar</Button>
-            <label>   </label>
-            <Button href="/Tipo">Siguiente</Button>
+    handleChange = (e) => {
+        this.setState({
+            ...this.state,
+            form: {
+                competence: this.state.form.competence,
+                name: this.state.form.name,
+                objetivo: this.state.form.objetivo,
+                problematica : this.state.form.problematica,
+                [e.target.name]: e.target.value,
+            },
+        });
+    }
 
 
-        </div>)
+    render() {
+        return (
+            <div className="contenedor">
+                <h1>Nuevo proyecto</h1>
+                <br/>
+                <div className="form">
+                    <Form onSubmit={this.handleSubmit}>
+                        <label>Competencia general</label>
+
+                            <div>
+                                <select  name="competencias" onChange={ this.handleChange }
+                                         defaultValue={ this.state.form.competence }>
+                                    {
+                                        this.state.competence.map(competence =>
+                                            <option>{competence.name}</option>
+                                        )
+                                    }
+                            </select>
+                            </div>
+                        <br/>
+                        <br/>
+                        <label>Nombre</label>
+                               <div>  <Input name="name" onChange={ this.handleChange }
+                                             defaultValue={ this.state.form.name }/></div>
+
+                        <br/>
+                        <br/>
+                        <label>Objetivo</label>
+                            <div> <TextArea name="objetivo" onChange={ this.handleChange }
+                                            defaultValue={ this.state.form.objetivo }/></div>
+                        <br/>
+                        <br/>
+                        <label>Problematica</label>
+                            <div><TextArea name="problematica" onChange={ this.handleChange }
+                                           defaultValue={ this.state.form.problematica }/></div>
+                        <br/>
+                        <br/>
+                        <h2>Agrega los recursos para resolver la problematica</h2>
+                        <br/>
+                        <br/>
+                        <Row>
+                            <Col xs={2} sm={4} md={6} lg={8} xl={10}>
+                                <Button  shape="round">Agregar</Button>
+                                <Button onClick={ this.handleLogin } type="submit" shape="round">siguiente</Button>
+                            </Col>
+                            <Col xs={20} sm={16} md={12} lg={8} xl={4}>
+
+                            </Col>
+                            <Col xs={2} sm={4} md={6} lg={8} xl={10}>
+
+                            </Col>
+                        </Row>
 
 
+                    </Form>
+                </div>
+            </div>
+            )
+
+
+    }
 }
-
 export default intership;
