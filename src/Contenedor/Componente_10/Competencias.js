@@ -1,118 +1,77 @@
-import * as React from 'react';
-import {Button, Col, Divider, Dropdown, Input, Menu, Row} from "antd";
-import TextArea from "antd/es/input/TextArea";
+import  React, {Component} from 'react';
+import './Competencias.css';
+import {Button, Col, Divider, Dropdown, Input, Menu, Row, Form,Collapse} from "antd";
+import { DownOutlined, UserOutlined } from '@ant-design/icons';
+const { Panel } = Collapse;
+
+class competencias extends  Component{
+    render(){
+        return(
+                <>
+                 <Form>
+                     <div className="contenedor">
+                      <br/>
+                     <p3>Competencias requeridas</p3>
+                      <br/>
+                     <p1>Titulo grande de la competencia</p1>
+                     <br/>
+                     <p2>Descripcion de la competencia</p2>
+                         <br/>
+                         <br/>
+                     <div className="collapse">
+                         <Collapse >
+                             <Panel header="Competencia 1" >
+                                 <Dropdown className="drop">
+                                     <Button>
+                                         Indicadores para evaluación<DownOutlined/>
+                                     </Button>
+                                 </Dropdown>
+                                 <Dropdown className="drop">
+                                     <Button>
+                                        Indicadores para la evaluación<DownOutlined/>
+                                     </Button>
+                                 </Dropdown>
+                             </Panel>
+                             <Panel  header="Competencia 2">
+                                 <Dropdown className="drop">
+                                     <Button>
+                                         Indicadores para evaluación<DownOutlined/>
+                                     </Button>
+                                 </Dropdown>
+                                 <Dropdown className="drop">
+                                     <Button>
+                                         Indicadores para la evaluación<DownOutlined/>
+                                     </Button>
+                                 </Dropdown>
+                             </Panel>
+                             <Panel header="Competencia 3" >
+                                 <Dropdown className="drop">
+                                     <Button>
+                                         Indicadores para evaluación<DownOutlined/>
+                                     </Button>
+                                 </Dropdown>
+                                 <Dropdown className="drop">
+                                     <Button>
+                                         Indicadores para la evaluación<DownOutlined/>
+                                     </Button>
+                                 </Dropdown>
+                             </Panel>
+                         </Collapse>
+
+                             <Button className="btn">Siguiente</Button>
 
 
-const menu = (
-    <Menu>
-        <Menu.Item>
-            <a target="_blank" >
-                1st menu item
-            </a>
-        </Menu.Item>
-        <Menu.Item>
-            <a target="_blank" >
-                2nd menu item
-            </a>
-        </Menu.Item>
-        <Menu.Item>
-            <a target="_blank" >
-                3rd menu item
-            </a>
-        </Menu.Item>
-    </Menu>
-);
+                     </div>
+
+                     </div>
 
 
-let competencias = () =>{
-
-    return(
-            <div>
-                <h1>Competencias requeridas por el Proyecto Internship</h1>
-                <Divider>
-                    <h3>Competencias requeridas por el Proyecto Internship</h3>
-                </Divider>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Nombre de reto:</Col>
-                    <Col span={6}><Input type="text" /></Col>
-                    <Col span={6}></Col>
-                </Row>
-                <br/>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Descripción:</Col>
-                    <Col span={6}><TextArea/></Col>
-                    <Col span={6}></Col>
-                </Row>
-                <br/>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Competencia 1</Col>
-                    <Col span={6}>
-                        <Dropdown overlay={menu} placement={"bottomCenter"}>
-                            <Button>DROPMENU</Button>
-                        </Dropdown>
-                    </Col>
-                    <Col span={6}></Col>
-                </Row>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Indicadores de evaluación</Col>
-                    <Col span={6}>
-                        <Dropdown overlay={menu} placement={"bottomCenter"}>
-                            <Button>DROPMENU</Button>
-                        </Dropdown>
-                    </Col>
-                    <Col span={6}></Col>
-                </Row>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Indicadores de evaluación</Col>
-                    <Col span={6}>
-                        <Dropdown overlay={menu} placement={"bottomCenter"} >
-                            <Button>DROPMENU</Button>
-                        </Dropdown>
-                    </Col>
-                    <Col span={6}></Col>
-                </Row>
-                <br/>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Competencia 2</Col>
-                    <Col span={6}>
-                        <Dropdown overlay={menu} placement={"bottomCenter"}>
-                            <Button>DROPMENU</Button>
-                        </Dropdown>
-                    </Col>
-                    <Col span={6}></Col>
-                </Row>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Indicadores de evaluación</Col>
-                    <Col span={6}>
-                        <Dropdown overlay={menu} placement={"bottomCenter"}>
-                            <Button>DROPMENU</Button>
-                        </Dropdown>
-                    </Col>
-                    <Col span={6}></Col>
-                </Row>
-                <Row>
-                    <Col span={6}></Col>
-                    <Col span={6}>Indicadores de evaluación</Col>
-                    <Col span={6}>
-                        <Dropdown overlay={menu} placement={"bottomCenter"} >
-                            <Button>DROPMENU</Button>
-                        </Dropdown>
-                    </Col>
-                    <Col span={6}></Col>
-                </Row>
-            <Button href="/Rec">Siguiente</Button>
-            </div>
+                 </Form>
+                </>
 
 
-    )
+        )
 
-
+    }
 }
 export default competencias;

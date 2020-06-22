@@ -1,13 +1,15 @@
-.tabla tr:nth-child(even) {
-    background-color: #eee;
+.btn_add_proyect{
+
+    background-color:#a377f7 !important ;
+    margin-left: 1050px !important;
+    color: white !important;
 }
 
-.table tr:nth-child(odd) {
-    background-color: #fff;
+h1{
+    font-size: 35px !important;
 }
-.tabla tr:nth-child(2) {
-    background-color: #eee;
-}
-.tabla tr {
-    background-color: #eee;
+.tab{
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-top: 3% !important;
 }

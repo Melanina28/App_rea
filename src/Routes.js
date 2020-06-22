@@ -10,11 +10,12 @@ import Recursos from './Contenedor/Componente_11/Recursos';
 import competencias from "./Contenedor/Componente_10/Competencias";
 import Botton from "./Contenedor/Componente_3/Botton";
 import Retos from "./Contenedor/Contenedor_9/Retos";
+import Administracion from "./Contenedor/Componente_2/Administracion";
 class routes extends Component{
     render(){
         return(<di>
-    <Route path={"/retos "} exact component={Retos}/>
-
+    <Route path={"/retos "}  component={Retos}/>
+    <Route path={"/admin" }  component={Administracion}/>
     <Route path={"/botones"} component={Botton}/>
     <Route path={"/importar"} component={Importar_intership} />
     <Route path={"/agregar"} component={Agregar_interships} />
