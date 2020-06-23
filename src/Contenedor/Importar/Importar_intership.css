@@ -1,0 +1,24 @@
+Input{
+    display: block!important;
+    width: 50%!important;
+    height: border-box !important;
+    position: relative!important;
+    top: 10px!important;
+    background-color: white !important;
+    border-color: black!important;
+    left: 150px!important;
+    
+}
+TextArea{
+    border-radius: 10px !important;
+    display: block!important;
+    width: 50%!important;
+    height: border-box !important;
+    position: relative!important;
+    top: 10px!important;
+    background-color: white !important;
+    border-color: black!important;
+    left: 150px!important;
+
+}
+

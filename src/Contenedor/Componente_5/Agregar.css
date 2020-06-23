@@ -9,7 +9,6 @@
     top: 10px;
     right: 300px;
 }
-
 .form label{
 
     font-size: 15px ;
@@ -22,7 +21,6 @@
     right: 150px ;
 
 }
-
 .form Select, Input{
     width: 500px !important;
     height: 30px !important;
@@ -38,7 +36,6 @@
     right: 300px !important;
     border-color: rgba(116, 184, 250, 0.58) !important;
 }
-
 .form TextArea{
     width: 500px !important;
     height: 100px!important;
@@ -54,8 +51,6 @@
     position: relative!important;
     top: 10px!important;
     right: 300px!important;
-
-
 }
 .form select:hover {
     opacity: 0.6;
